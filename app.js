@@ -47,7 +47,7 @@ function bugClickHandler(bug) {
         alert('Kenni wrote some code, but had typos...' + bug.name + ' is still buggy');
     }
 
-    if (Math.random() < 0.4) {
+    if (Math.random() < 0.3) {
         kenniHP--;
         alert(bug.name + ' gave kenni a headache.');
     } else {
@@ -74,6 +74,8 @@ function bugClickHandler(bug) {
 
     const emojiEl = document.getElementById(`bug-${bug.id}`);
     emojiEl.textContent = bug.hp > 0 ? '👾' : '✅';
+
+    displayBugs();
 }
 
 /* Display Functions */
