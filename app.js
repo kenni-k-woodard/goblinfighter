@@ -15,7 +15,7 @@ const bugs = [
 ];
 
 let currentId = 3;
-let kenniHP = 10;
+let kenniHP = 1;
 let defeatedCount = 0;
 
 /* Events */
@@ -39,6 +39,7 @@ formEl.addEventListener('submit', (e) => {
 
 function bugClickHandler(bug) {
     if (bug.hp <= 0) return;
+    if (kenniHP <= 0) return;
 
     if (Math.random() < 0.33) {
         bug.hp--;
@@ -74,8 +75,6 @@ function bugClickHandler(bug) {
 
     const emojiEl = document.getElementById(`bug-${bug.id}`);
     emojiEl.textContent = bug.hp > 0 ? '👾' : '✅';
-
-    displayBugs();
 }
 
 /* Display Functions */

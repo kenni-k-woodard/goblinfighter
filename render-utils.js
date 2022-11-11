@@ -10,7 +10,7 @@ export function renderBug(bug) {
     hpEl.textContent = bug.hp < 0 ? 0 : bug.hp;
     hpEl.id = `bug-hp-${bug.id}`;
 
-    emojiEl.id = `bug-id-${bug.id}`;
+    emojiEl.id = `bug-${bug.id}`;
     emojiEl.textContent = bug.hp > 0 ? '👾' : '✅';
 
     if (bug.hp < 0) {
