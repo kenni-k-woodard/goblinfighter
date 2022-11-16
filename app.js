@@ -15,7 +15,7 @@ const bugs = [
 ];
 
 let currentId = 3;
-let kenniHP = 1;
+let kenniHP = 10;
 let defeatedCount = 0;
 
 /* Events */
@@ -41,14 +41,14 @@ function bugClickHandler(bug) {
     if (bug.hp <= 0) return;
     if (kenniHP <= 0) return;
 
-    if (Math.random() < 0.33) {
+    if (Math.random() < 0.38) {
         bug.hp--;
         alert('Kenni wrote a line of code to fix ' + bug.name);
     } else {
         alert('Kenni wrote some code, but had typos...' + bug.name + ' is still buggy');
     }
 
-    if (Math.random() < 0.3) {
+    if (Math.random() < 0.45) {
         kenniHP--;
         alert(bug.name + ' gave kenni a headache.');
     } else {

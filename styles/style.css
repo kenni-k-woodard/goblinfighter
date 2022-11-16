@@ -2,3 +2,12 @@ defeated {
     opacity: 0.2;
     cursor: default;
 }
+
+main {
+    display: flex;
+    gap: 100px;
+}
+
+.game-over {
+    transform: rotate(90deg);
+}
